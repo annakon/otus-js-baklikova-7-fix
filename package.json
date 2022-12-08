@@ -7,7 +7,8 @@
     "test": "jest",
     "lint": "prettier --check . && eslint . src --ext .js,.ts",
     "lint:fix": "prettier --write . && eslint . --fix src --ext .js,.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "typecheck": "npx tsc --noemit"
   },
   "repository": {
     "type": "git",
@@ -56,5 +57,11 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
