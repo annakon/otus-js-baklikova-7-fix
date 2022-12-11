@@ -8,7 +8,7 @@
 // Нужно заменить FIXME на тип который вычисляется на освове OrderState
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type FIXME = Array <"initial" |"inWork"| "fullfilled">;
+type FIXME = Array<Exclude<OrderState,"buyingSupplies" | "producing">>;
 
 const orderStates = [
     "initial",
