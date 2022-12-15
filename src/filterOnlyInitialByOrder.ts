@@ -11,7 +11,7 @@ type FIXME = Extract<Order,{
 } | {
     state: "initial";
     sum: number;
-}>;
+}> | null;
 
 type Order =
     | {
